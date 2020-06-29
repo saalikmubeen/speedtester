@@ -1,0 +1,46 @@
+#word-input {
+    border-radius: 30px;
+    height: 60px;
+    color: black;
+    font-weight: bold;
+    font-family: "Montserrat", Helvetica, sans-serif;
+    font-size: 14pt;
+    letter-spacing: 0.7px;
+    box-shadow: 2px 10px 30px rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: none;
+    background-color: #222a38;
+    transition: background-color 0.2s linear;
+    /* animation: fade 0.6s ease-in-out 1.2s forwards; */
+    padding: 14px 12px;
+    text-align: center;
+}
+
+#word-input:focus {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+body {
+    background: linear-gradient( 35deg, #1e2530, #11151c);
+    overflow: hidden;
+    color: aliceblue;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#high-score-tag {
+    font-family: "Paytone One", Helvetica, sans-serif;
+    color: #222a38;
+    font-size: 20pt;
+    transition: color 0.2s linear;
+}
+
+#high-score-tag:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
