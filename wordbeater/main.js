@@ -72,7 +72,19 @@ const words = [
 
 let timeleft = 5;
 let score = 0;
-let highScore = 0;
+var highScore;
+if (localStorage.getItem('highestScore') === null) {
+    // this statement will be executed when it is the first time for the user
+    // there would be no localstorage named 'highestScore'
+    highScore = 0;
+} else {
+    // this will be executed if the localstorage 'higheststorage' already exists
+    //i.e. user have already visited this site once
+    highScore = localStorage.getItem('highestScore');
+}
+
+highScoredis.textContent = highScore;
+// displaying the highest score of the user since he started using this site
 
 function start() {
     // displayWord()
@@ -111,6 +123,7 @@ function matchWords() {
             score++;
             if (score > highScore) {
                 highScore = score
+                localStorage.setItem('highestScore', highScore); // changing the value in local storage
                 highScoredis.textContent = highScore
             }
             scoredisplay.textContent = score;
